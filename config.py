@@ -9,24 +9,26 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID", "25891829")) #ASİSTAN APİ İD
-API_HASH = getenv("API_HASH", "86ae507ce3fac59aba36a83d54794c09") #ASİSTAN APİ HASH
+API_ID = int(getenv("API_ID", "26400244")) #ASİSTAN APİ İD
+API_HASH = getenv("API_HASH", "5e69daaa3668a56fe9b72319b280c071") #ASİSTAN APİ HASH
+
+EVAL = list(map(int, getenv("EVAL", "7427691214 7045191057").split()))
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN", "6742876419:AAHJeGw8xiWrdzTbmt--jLahcRbMF1UbmUw") #BOT TOKEN
+BOT_TOKEN = getenv("BOT_TOKEN", "7535775173:AAHvPT0bbtr53hE3s5AYtbq2_argrNzpj3Q") #BOT TOKEN
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","Cankabusunefendisi")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "Derlermebot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "sonsuzmuzikbot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "Deneme")
+BOT_NAME = getenv("BOT_NAME" , "ₛₒₙₛᵤz ₘüzᵢₖ")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "Sonsuzasistan6")
+ASSUSERNAME = getenv("ASSUSERNAME" , "Kabusmuzikbot")
 # ---------------------------------------------------------
 
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://botmuzik654:muziks@cluster0.5ory5au.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ahmetcanyaman495:ahmetcanyaman495@cluster0.4ltto.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -35,10 +37,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002085023075")) #LOG GRUBU İD'Sİ -100 İLE BAŞLAMALI
+LOGGER_ID = int(getenv("LOGGER_ID", -1002085023075))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 6437967819)) #OWNER İD
+OWNER_ID = int(getenv("OWNER_ID", 6437967819))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -53,7 +55,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/AHMET1346z/Zzzzzzzzzzzzzz",
+    "https://github.com/AHMET1346z/dirili-",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
@@ -68,7 +70,7 @@ GIT_TOKEN = getenv(
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/sonsuzduyuru") #DESTEK KANALI LİNKİ
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sonsuzmuzikdestek") #DESTEK GRUBU LİNKİ
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sonsuzmuzikdestek")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -82,7 +84,7 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sonsuzmuzikdestek") #DESTEK 
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "9000"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
 SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "9999999"))
@@ -114,7 +116,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
 # ------------------------------------
 # ------------------------------------
 # ------------------------------------
-STRING1 = getenv("STRING_SESSION", "BAHHpwsAIDPT3csi7sqxTxieFWvL-nuHx6WrtfRwaVdXuNN-vMBgC-GYCU9ZxBBLsOp6h9Fe-DoJePEKaP0dS8yRVvyx8efAa_O2uNYXCksvAfaAi8P1Y8atzKJKZEQOsQU7GFrUgaZT7YqN_IM2QKWL_ADUtMjdd3HbGM2B5lRLVcB7QkPc12HCUgJi3jBqqLtNDUKBtqRDzt8Yy6Bi9BKpNcFFs_HKDezyL6zkGIf3SAO6sEEhps2Nc7gApr0UeOx1Zz-lJB_mHNz07O86joTKkkGJ-IGdXjkvcfuw33eJAEr1VvcVNQwFvnTArzREzxdRCk41sel_KyrKVv7DAhylI4R8CwAAAAGHr-5HAA") #ASİSTAN SESSİON
+STRING1 = getenv("STRING_SESSION", "BAHHpwsAM_15li1oinBDHjxZSoDd5ITgDuD6nCIgw7tcAxzm6ySlUmznnqS4tWR2KOks9ypPP3jR602ylSRuwIq1AXvEURb584pK2mvTk5vrVdvJSgMKCqcg9XtilXn6RiMpxW0AjQlDB70IjG7kC8q6LEe3KOBKHQmnWZ0PR-fMhQvSfIikK37z5hGaaYUZXWCgTsiNnwgawU8ZOg9rns2zSQSpSTZ5A0zhlZccbWey4dAdMqa-oyuo5CizcWgR7EM8IpnwGeLCA_jcwMEUwY_3uPcouagEaCGoqpt5W7NnhUKBh3arVnk2ZaYyptME-OUqRha7xkhNegjhQdoKuBmao-Y4jgAAAAGHr-5HAA") #ASİSTAN SESSİON
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -141,21 +143,21 @@ confirmer = {}
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/cfbdee8103102bcb2e5da.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/b79290e357a600dc3ab43.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/00360393a15daf7fc4e9d.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/b79290e357a600dc3ab43.jpg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/48f39202823b358203234.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e575ae40d6635250974e1.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/03efec694e41e891b29dc.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/4dc854f961cd3ce46899b.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
+STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
 
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
